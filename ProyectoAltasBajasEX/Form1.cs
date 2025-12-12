@@ -6,19 +6,75 @@ namespace ProyectoAltasBajasEX
 {
     public partial class Form1 : Form
     {
-        // Diccionario de carreras y materias PENDIENETE MODIFICAR
+        // Diccionario de carreras y materias 
         Dictionary<string, List<string>> materiasPorCarrera = new Dictionary<string, List<string>>()
-        {
+{
+            ///// Ingeniería en Informática
             { "Ingeniería en Informática", new List<string>()
-                { "Fundamentos de programación", "Matemáticas I", "Física I", "Inglés I", "Introducción a la Ingeniería" }
+                {
+                    "Fundamentos de Programación",
+                    "Matemáticas I",
+                    "Física I",
+                    "Inglés I",
+                    "Introducción a la Ingeniería",
+                    "Estructura de Datos",
+                    "Programación Orientada a Objetos",
+                    "Base de Datos I",
+                    "Matemáticas Discretas",
+                    "Arquitectura de Computadoras"
+                }
             },
 
-            { "Gestión empresarial", new List<string>()
-                { "Contabilidad I", "Derecho Mercantil", "Matemáticas Financieras", "Inglés I", "Administración I" }
+            ///// Gestión Empresarial
+            { "Gestión Empresarial", new List<string>()
+                {
+                    "Contabilidad I",
+                    "Derecho Mercantil",
+                    "Matemáticas Financieras",
+                    "Inglés I",
+                    "Administración I",
+                    "Economía Empresarial",
+                    "Desarrollo Organizacional",
+                    "Mercadotecnia I",
+                    "Habilidades Directivas",
+                    "Estadística Aplicada"
+                }
             },
 
-            { "Energias renovables", new List<string>()
-                { "Administración I", "Economía I", "Matemáticas I", "Inglés I", "Comportamiento Organizacional" }
+            ///// Energías Renovables 
+            { "Energías Renovables", new List<string>()
+                {
+                    "Administración I",
+                    "Economía I",
+                    "Matemáticas I",
+                    "Inglés I",
+                    "Comportamiento Organizacional",
+                    "Fundamentos de Energías Renovables",
+                    "Electricidad y Magnetismo",
+                    "Termodinámica Aplicada",
+                    "Sistemas Fotovoltaicos",
+                    "Eficiencia Energética",
+                    "Fuentes Alternas de Energía",
+                    "Impacto Ambiental"
+                }
+            },
+
+            ///// Ingeniería Mecánica
+            { "Ingeniería Mecánica", new List<string>()
+                {
+                    "Cálculo Diferencial",
+                    "Álgebra Lineal",
+                    "Física Mecánica",
+                    "Introducción a la Ingeniería",
+                    "Química Básica",
+                    "Dibujo Industrial",
+                    "Materiales de Ingeniería",
+                    "Estática",
+                    "Dinámica",
+                    "Termodinámica",
+                    "Procesos de Manufactura",
+                    "Resistencia de Materiales"
+                }
             }
         };
 
@@ -29,15 +85,16 @@ namespace ProyectoAltasBajasEX
             CargarSemestres();
         }
 
-        // Cargar carreras en el ComboBox de Carrera
+        
         private void CargarCarreras()
         {
             cmbCarrera.Items.Add("Ingeniería en Informática");
-            cmbCarrera.Items.Add("Gestión empresarial");
-            cmbCarrera.Items.Add("Energias renovables");
+            cmbCarrera.Items.Add("Gestión Empresarial");
+            cmbCarrera.Items.Add("Energías Renovables");
+            cmbCarrera.Items.Add("Ingeniería Mecánica");
         }
 
-        // Semestre ya NO controla materias, solo es un combo normal
+      
         private void CargarSemestres()
         {
             cmbSemestre.Items.Add("1");
